@@ -1,4 +1,3 @@
 # Python
 My first python code
-Whats up ryna?
-<whats up ryna?>
+I just love this
