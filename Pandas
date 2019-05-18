@@ -18,3 +18,6 @@ import pandas as pd
 my_dict={"country":names,"drives_right":dr,"cars_per_cap":cpc}
 cars=pd.DataFrame(my_dict)
 print(cars)
+ 
+import data from csv
+cars = pd.read_csv('cars.csv', index_col = 0)

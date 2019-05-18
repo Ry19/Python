@@ -1,0 +1,39 @@
+Loops
+While
+offset=8
+
+while offset!=0 :
+    offset= offset-1
+    print("correcting...")
+    print(offset)
+
+For Loops
+
+house=[["hallway", 11.25], 
+         ["kitchen", 18.0], 
+         ["living room", 20.0], 
+         ["bedroom", 10.75], 
+         ["bathroom", 9.50]]
+
+
+for x in house:
+    print("the" + x[0] + "is" + str(x[1]) + "sqm")
+
+Loop over dictionary
+
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
+          'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'austria':'vienna'}
+
+for key,value in europe.items():
+    print("the capital of" + key + 'is' +str(value))
+
+ Apply
+ #for lab, row in cars.iterrows() :
+    #cars.loc[lab, "COUNTRY"] = row["country"].upper()
+cars["COUNTRY"]=cars["country"].apply(str.upper)
+print(cars)
+
+Add length columns
+
+cars["COUNTRY"]=cars["country"].apply(len)
+
