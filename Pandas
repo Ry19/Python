@@ -1,0 +1,20 @@
+europe = { 'spain': { 'capital':'madrid', 'population':46.77 },
+           'france': { 'capital':'paris', 'population':66.03 },
+           'germany': { 'capital':'berlin', 'population':80.62 },
+           'norway': { 'capital':'oslo', 'population':5.084 } }
+
+print(europe["france"]["capital"])
+data={"capital":"rome","population":59.83}
+europe["italy"]=data
+print(europe)
+
+
+
+names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
+dr =  [True, False, False, False, True, True, True]
+cpc = [809, 731, 588, 18, 200, 70, 45]
+
+import pandas as pd
+my_dict={"country":names,"drives_right":dr,"cars_per_cap":cpc}
+cars=pd.DataFrame(my_dict)
+print(cars)
