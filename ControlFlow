@@ -1,0 +1,15 @@
+Control Flow
+room = "kit"
+area = 14.0
+
+if room=="kit":
+    print("room's very large")
+else:
+    print("looking somewhere else")
+
+if area==12:
+    print("perfect")
+elif area==13:
+    print("decent")
+else:
+          print("ok")
