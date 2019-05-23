@@ -13,10 +13,21 @@ print(europe)
 names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']
 dr =  [True, False, False, False, True, True, True]
 cpc = [809, 731, 588, 18, 200, 70, 45]
+price= [100,150,200,250,300,350,400]
 
 import pandas as pd
-my_dict={"country":names,"drives_right":dr,"cars_per_cap":cpc}
+my_dict={"country":names,"drives_right":dr,"cars_per_cap":cpc,"price":price}
 cars=pd.DataFrame(my_dict)
+
+for lab,row in cars.iterrows():
+    cars.loc[lab,"COUNTRY"]=(row["country"].upper())
+for lab,row in cars.iterrows():
+    cars.loc[lab,"PRICE"]=(row["price"])
+
+cars["COUNTRY"]=cars["country"].apply(len)
+
+
+
 print(cars)
  
 import data from csv
