@@ -26,7 +26,9 @@ for lab,row in cars.iterrows():
 
 cars["COUNTRY"]=cars["country"].apply(len)
 
+cars1=cars.append(pd.Series(["UAE","True",80,550], index=cars.columns ), ignore_index=True)
 
+cars1.iloc[7]=["UAE","TRUE",60,80]
 
 print(cars)
  
