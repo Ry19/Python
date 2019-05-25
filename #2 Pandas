@@ -30,7 +30,7 @@ cars1=cars.append(pd.Series(["UAE","True",80,550], index=cars.columns ), ignore_
 
 cars1.iloc[7]=["UAE","TRUE",60,80]
 
-print(cars)
+print(cars1)
  
 import data from csv
 cars = pd.read_csv('cars.csv', index_col = 0)
