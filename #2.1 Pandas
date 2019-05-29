@@ -10,10 +10,18 @@ import pandas as pd
 austin =pd.read_csv('austin_file.csv')
 austin1=austin.append(pd.Series(["lakeway212",12,2123,123],index=austin.columns),ignore_index=True)
 
+print(austin1)
+
 y_columns= ['NAME','PRCP']
 
 
 austin.plot(x='DATE',y=y_columns)
 plt.title('this is amazing')
 
-print(austin1)
+print(austin['PRCP'].mean())
+
+mean = austin.mean(axis='columns')
+mean.plot()
+plt.show()
+
+

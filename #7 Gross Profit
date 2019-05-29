@@ -1,0 +1,19 @@
+Sensitivity analysis for gross profit
+
+sales_usd = [700, 350, 650]
+
+# Create the if statement to calculate the forecast_gross_profit
+for sales in sales_usd:
+    if sales > 350:
+        sales_dep = (350 * base_sales_price) + ((sales - 350) * (base_sales_price - 1))
+    else:
+        sales_dep = sales * base_sales_price
+    if sales > 500:
+        cost_dep = (500 * base_cost_price) + ((sales - 500) * (base_cost_price + 2))
+    else:
+        cost_dep = sales * base_cost_price
+    forecast_gross_profit = sales_dep - cost_dep
+
+    # Print the result
+    print("The gross profit forecast for a sale unit value of {} is {} USD.".format(sales, forecast_gross_profit))
+    
