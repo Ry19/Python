@@ -1,0 +1,47 @@
+Creating a new function
+
+def square(value):
+    """Returns a new value"""
+    new_value = value**2
+    return new_value
+
+num=square(5)
+print(num)
+
+def shout(word):
+    """Print any word, +!!!."""
+    shout_word= word + '!!!'
+    print(shout_word)
+
+
+
+shout('Win')
+
+
+Tuples
+
+def divide_both(value1,value2):
+    """divide each number with the other."""
+    new_value1=value1/value2
+    new_value2=value2/value1
+    new_values=(new_value1,new_value2)
+    return new_values
+
+combo=divide_both(10,20)
+print(combo)
+
+Nested functions
+
+def raise_val(n):
+    "return the inner function."""
+
+    def inner(x):
+        "raise x to the power of n"""
+        raised=x**n
+        return raised
+    return inner
+
+square=raise_val(2)
+ten=raise_val(10)
+print(ten(4))
+
