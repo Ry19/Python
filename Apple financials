@@ -1,0 +1,53 @@
+Apple financials
+import pandas as pd
+import matplotlib.pyplot as plt
+
+apple1=pd.read_csv('apple_financials.csv',index_col=0)
+apple=apple1.transpose()
+
+print(apple)
+
+
+
+
+EPS=apple[["EPS"]]
+Net_Income=apple["Net Income"]
+                 
+
+
+print(EPS)
+print(Net_Income)
+
+print(EPS.mean)
+
+mean= apple.mean(axis='columns')
+mean.plot()
+plt.show()
+
+
+y_columns= ['EPS','Net_income']
+
+apple.plot(x='DATE',y=y_columns)
+plt.title("Apple EPS AND NI")
+
+plt.plot(EPS,color="red")
+plt.plot(Net_Income,color="blue")
+plt.xlim(14,19)
+plt.title("Apple EPS AND NI")
+plt.show()
+
+Linear Regression
+sns.lmplot(x="EPS",y="Net Income", data=apple)
+plt.show()
+
+Residual Plot
+sns.residplot(x="EPS",y="Net Income", data=apple)
+plt.legend(loc='upper right')
+plt.show()
+
+Scatter Plot
+plt.scatter(x='EPS', y='Net Income', data=apple)
+plt.xlabel("EPS")
+plt.ylabel("Net Income")
+plt.show()
+
