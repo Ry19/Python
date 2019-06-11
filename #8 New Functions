@@ -45,3 +45,28 @@ square=raise_val(2)
 ten=raise_val(10)
 print(ten(4))
 
+def parent(num):
+    def first_child():
+        return "Hi, I am Emma"
+
+    def second_child():
+        return "Call me Liam"
+
+    if num == 1:
+        return first_child
+    else:
+        return second_child
+
+first= parent(1)
+second= parent(2)
+
+print(first())
+
+def apply_discount(product, discount):
+    price= int(product['price'] * (1.0 - discount))
+    assert 0 <= price <= product['price']
+    return price
+
+shoes= {'name':'fancy shoes','price':14900}
+
+print(apply_discount(shoes,0.25))
