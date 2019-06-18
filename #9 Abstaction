@@ -9,3 +9,57 @@ def length_message(x):
 print(length_message("how"))
 
 
+class Person:
+
+    def set_name(self,name):
+        self.name=name
+
+    def get_name(self):
+        return self.name
+
+    def greet(self):
+        print("Hello world, I'm {}.".format(self.name))
+
+foo=Person()
+bar=Person()
+
+foo.set_name("Luke")
+bar.set_name("Anakin")
+print(foo.greet())
+print(bar.greet())
+
+class bird:
+	song="Squaawk!"
+	def sing(self):
+		print(self.song)
+
+		
+>>> Bird= bird()
+>>> Bird.sing()
+
+class Secretive:
+    def __inaccessible(self):
+        print("Bet you can't see me...")
+
+    def accessible(self):
+        print("The secret message is...")
+        self.__inaccessible()
+
+s=Secretive()
+print(s.accessible())
+
+s.__inaccessible()
+print(s.accessible())
+
+class Calculator:
+    def calculate(self, expression):
+        self.value = eval(expression)
+class Talker:
+    def talk(self):
+        print('Hi, my value is', self.value)
+class TalkingCalculator(Calculator, Talker):
+    pass
+
+tc=TalkingCalculator()
+tc.calculate("1+3+5*2")
+print(tc.talk())
