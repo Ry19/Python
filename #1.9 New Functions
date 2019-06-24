@@ -65,7 +65,13 @@ print(first())
 def apply_discount(product, discount):
     price= int(product['price'] * (1.0 - discount))
     assert 0 <= price <= product['price']
-    return price
+# Assert that there are no missing values
+assert pd.notnull(price).all().all()
+
+# Assert that all values are >= 0
+assert (price >= 0).all().all()
+return price
+
 
 shoes= {'name':'fancy shoes','price':14900}
 
@@ -81,3 +87,4 @@ def fibs(num):
 
 
 print(fibs(20))
+
