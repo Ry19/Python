@@ -173,3 +173,15 @@ plt.show()
 # Save both DataFrames to csv files
 gapminder.to_csv('gapminder.csv')
 gapminder_agg.to_csv('gapminder_agg.csv')
+
+
+from sqlalchemy import create_engine
+
+# Create engine: engine
+engine=create_engine('sqlite:///Chinook.sqlite')
+
+# Save the table names to a list: table_names
+table_names=engine.table_names()
+
+# Print the table names to the shell
+print(table_names)

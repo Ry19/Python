@@ -51,3 +51,8 @@ plt.xlabel("EPS")
 plt.ylabel("Net Income")
 plt.show()
 
+
+
+file='apple_financials.csv'
+apple_data=np.recfromcsv(file)
+print(apple_data)
