@@ -5,6 +5,21 @@ var_name=["EPS","Net Income"])
 
 bola_melt = pd.melt(ebola, id_vars=['Date', 'Day'], var_name='type_country', value_name='counts')
 
+ # Pivot table the airquality_dup: airquality_pivot
+airquality_pivot = airquality_dup.pivot_table(index=['Month', 'Day'], columns='measurement', values='reading', aggfunc=np.mean)
+
+# Print the head of airquality_pivot before reset_index
+print(airquality_pivot.head())
+
+# Reset the index of airquality_pivot
+airquality_pivot = airquality_pivot.reset_index()
+
+# Print the head of airquality_pivot
+print(airquality_pivot.head())
+
+# Print the head of airquality
+print(airquality.head())
+
 # Create the 'str_split' column
 ebola_melt['str_split'] = ebola_melt.type_country.str.split('_')
 
